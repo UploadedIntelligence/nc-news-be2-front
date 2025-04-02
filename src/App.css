@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -24,4 +24,27 @@ li {
 
 .article_card_title {
   color: #a8c28e;
+}
+
+#article_card_author {
+  font-size: 1.2em;
+  color: #d2c1c1;
+}
+
+#comment_section {
+  text-align: left;
+}
+
+#comment_card_author {
+  font-size: 1.2em;
+  color: #729b3f;
+}
+
+.article_img {
+  height: 15em
+}
+
+.article_comments {
+  padding: 0.5em;
+  border-bottom: #be1212 2px solid;
 }
