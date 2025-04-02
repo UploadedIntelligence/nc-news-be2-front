@@ -1,7 +1,7 @@
 import './App.css'
 import {Routes, Route} from "react-router-dom";
 import {MainPage} from "./MainPage.jsx";
-// import {DisplayArticle} from "./DisplayArticle.jsx"
+import {DisplayArticle} from "./DisplayArticle.jsx"
 // import {ArticlesProvider, TopicsProvider} from './Contexts.jsx'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
                 {/*<TopicsProvider>*/}
                     <Routes>
                         <Route path='' element={<MainPage/>}></Route>
-                        {/*<Route path='/articles/:article_id' element={<DisplayArticle/>}></Route>*/}
+                        <Route path='/articles/:article_id' element={<DisplayArticle/>}></Route>
                     </Routes>
                 {/*</TopicsProvider>*/}
                 {/*</ArticlesProvider>*/}

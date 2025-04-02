@@ -20,6 +20,22 @@ const getArticles = (selectedCategory) => {
     }
 }
 
+const getArticle = (articleId) => {
+    return api.get(`/articles/${articleId}`)
+        .then(({data}) => {
+            console.log(data)
+            return data.article
+        })
+}
+
+const getComments = (articleId) => {
+    return api.get(`/articles/${articleId}/comments`)
+        .then(({data}) => {
+            console.log(data)
+            return data.comments
+        })
+}
+
 const getTopics = () => {
     return api.get('/topics')
         .then(({data}) => {
@@ -27,4 +43,4 @@ const getTopics = () => {
         })
 }
 
-export {getArticles, getTopics}
+export {getArticles, getArticle, getTopics, getComments}
