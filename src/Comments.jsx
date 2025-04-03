@@ -3,7 +3,6 @@ import {useApiRequest} from "./useApiRequest.jsx";
 import {WriteComment} from "./WriteComment.jsx";
 
 const Comments = ({article_id}) => {
-    console.log(article_id)
     const { data: comments } = useApiRequest(getComments, article_id)
 
     return (
