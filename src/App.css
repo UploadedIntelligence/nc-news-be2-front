@@ -40,6 +40,12 @@ li {
   color: #729b3f;
 }
 
+#input_form {
+  width: 100%;
+  min-width: 20em;
+  min-height: 5em
+}
+
 .article_img {
   height: 15em
 }
@@ -48,3 +54,30 @@ li {
   padding: 0.5em;
   border-bottom: #be1212 2px solid;
 }
+
+.voting_card {
+  border: #172d40 3px solid;
+  justify-self: right;
+}
+
+#vote_count {
+  font-size: 1em;
+  margin: 0;
+  color: aquamarine;
+}
+
+#upvote, #downvote{
+  font-size: 2.1em;
+  padding: 0;
+  line-height: 1em;
+  width: 100%;
+}
+
+#upvote {
+  background: linear-gradient(#25fa00, #8d4e61);
+}
+
+#downvote {
+  background: linear-gradient(#8d4e61, #ff0000);
+}
+

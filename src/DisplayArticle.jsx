@@ -4,11 +4,11 @@ import {useApiRequest} from "./useApiRequest.jsx";
 import {Loading} from "./Loading.jsx";
 import {Error} from "./Error.jsx";
 import {Comments} from "./Comments.jsx";
+import {Votes} from "./Votes.jsx";
 
 
 const DisplayArticle = () => {
     const {article_id} = useParams()
-    console.log(article_id)
     const {data: article, isLoading, error} = useApiRequest(getArticle, article_id)
 
     if (isLoading) {
@@ -16,7 +16,6 @@ const DisplayArticle = () => {
     }
 
     if (error) {
-        console.log(error)
         return <Error error={error}/>
     }
 
@@ -24,12 +23,7 @@ const DisplayArticle = () => {
         return <Loading />
     }
 
-    // useEffect(() => {
-    //     const display_date = article.created_at.split('T')[0]
-    //     const display_time = article.created_at.split('T')[1].slice(0,5)
-    //     console.log(display_date)
-    //     console.log(display_time)
-    // }, [article])
+    console.log(article)
 
     return (
         <ul>
@@ -37,6 +31,7 @@ const DisplayArticle = () => {
             <h2>{article.title}</h2>
             <span id='article_card_author'>by {article.author}</span>
             <p>{article.body}</p>
+            <Votes votes={article.votes} article_id={article_id}/>
             <div>
                 <Comments article_id={article_id}/>
             </div>
