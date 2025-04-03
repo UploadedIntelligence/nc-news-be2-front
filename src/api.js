@@ -23,7 +23,6 @@ const getArticles = (selectedCategory) => {
 const getArticle = (articleId) => {
     return api.get(`/articles/${articleId}`)
         .then(({data}) => {
-            console.log(data)
             return data.article
         })
 }
@@ -31,8 +30,14 @@ const getArticle = (articleId) => {
 const getComments = (articleId) => {
     return api.get(`/articles/${articleId}/comments`)
         .then(({data}) => {
-            console.log(data)
             return data.comments
+        })
+}
+
+const patchVote = (articleId, vote) => {
+    return api.patch(`/articles/${articleId}/${vote}`)
+        .then(({data}) => {
+            return data.article
         })
 }
 
@@ -43,4 +48,4 @@ const getTopics = () => {
         })
 }
 
-export {getArticles, getArticle, getTopics, getComments}
+export {getArticles, getArticle, getTopics, getComments, patchVote}

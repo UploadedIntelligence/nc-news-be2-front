@@ -10,11 +10,10 @@ const useApiRequest = (apiFunction, ...args) => {
         setIsLoading(true)
         apiFunction(...args)
             .then((data) => {
-                setData(data);
                 console.log(data)
+                setData(data);
             })
-            .catch((err) => {
-                console.log(err)
+            .catch(() => {
                 setError({ status: 404, statusText: 'Failed to load'})
             })
             .finally(() => {
