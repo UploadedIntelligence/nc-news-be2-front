@@ -8,13 +8,11 @@ const getArticles = (selectedCategory) => {
     if (selectedCategory) {
         return api.get(`/articles?topic=${selectedCategory}`)
             .then(({data}) => {
-                console.log(data)
                 return data
         })
     } else {
         return api.get('/articles')
             .then(({data}) => {
-                console.log(data.articles)
                 return data.articles
             })
     }

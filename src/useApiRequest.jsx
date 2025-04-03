@@ -10,7 +10,6 @@ const useApiRequest = (apiFunction, ...args) => {
         setIsLoading(true)
         apiFunction(...args)
             .then((data) => {
-                console.log(data)
                 setData(data);
             })
             .catch(() => {

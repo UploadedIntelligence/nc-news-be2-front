@@ -10,6 +10,11 @@ li {
   list-style: none;
 }
 
+h1, h2 {
+  color: #d1cfcf;
+}
+
+
 .articles {
   display: flex;
 }
@@ -26,13 +31,22 @@ li {
   color: #a8c28e;
 }
 
+.article_card_info {
+  color: #ddcfcf;
+}
+
 #article_card_author {
   font-size: 1.2em;
-  color: #d2c1c1;
+  color: #ddcfcf;
+}
+
+#article_card_body {
+  color: #ebe5e5;
 }
 
 #comment_section {
   text-align: left;
+  color: #e6e0e0;
 }
 
 #comment_card_author {
