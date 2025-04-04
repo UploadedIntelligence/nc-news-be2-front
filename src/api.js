@@ -32,6 +32,25 @@ const getComments = (articleId) => {
         })
 }
 
+const postComment = (articleId, username, body) => {
+    return api.post(`/articles/${articleId}/comments`,
+        {username: username, body: body})
+        .then(({data}) => {
+            return data
+        })
+}
+
+const deleteComment = (comment_id) => {
+    return api.delete(`/comments/${comment_id}`)
+}
+
+const getUsers = () => {
+    return api.get('/users')
+        .then(({data}) => {
+            return data.users
+        })
+}
+
 const patchVote = (articleId, vote) => {
     return api.patch(`/articles/${articleId}/${vote}`)
         .then(({data}) => {
@@ -46,4 +65,4 @@ const getTopics = () => {
         })
 }
 
-export {getArticles, getArticle, getTopics, getComments, patchVote}
+export {getArticles, getArticle, getTopics, getComments, getUsers, patchVote, postComment, deleteComment}

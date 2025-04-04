@@ -17,6 +17,7 @@ h1, h2 {
 
 .articles {
   display: flex;
+  flex-direction: column;
 }
 
 .article_card {
@@ -58,6 +59,10 @@ h1, h2 {
   width: 100%;
   min-width: 20em;
   min-height: 5em
+}
+
+#logged_user_comment {
+  color: #82f46d;
 }
 
 .article_img {
