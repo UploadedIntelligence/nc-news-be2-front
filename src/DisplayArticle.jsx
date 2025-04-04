@@ -25,7 +25,7 @@ const DisplayArticle = () => {
             <h2>{article.title}</h2>
             <span id='article_card_author'>by {article.author}</span>
             <p id='article_card_body'>{article.body}</p>
-            <Votes votes={article.votes} article_id={article_id}/>
+            <Votes current_article={article} article_id={article_id}/>
             <div>
                 <Comments article_id={article_id}/>
             </div>
