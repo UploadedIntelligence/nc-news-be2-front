@@ -9,9 +9,9 @@ const Votes = ({current_article, article_id}) => {
     const castVote = (event) => {
         let arrow_value = event.target.innerText
         if (arrow_value === '↑') {
-            setVoteType('upvote')
+            setVoteType(1)
         } else {
-            setVoteType('downvote')
+            setVoteType(-1)
         }
     }
 

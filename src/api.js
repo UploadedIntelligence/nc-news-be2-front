@@ -52,7 +52,8 @@ const getUsers = () => {
 }
 
 const patchVote = (articleId, vote) => {
-    return api.patch(`/articles/${articleId}/${vote}`)
+    console.log(vote)
+    return api.patch(`/articles/${articleId}`, { inc_votes: vote })
         .then(({data}) => {
             return data.article
         })

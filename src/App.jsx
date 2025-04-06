@@ -13,7 +13,7 @@ function App() {
     const [loggedUser, setLoggedUser] = useState(null)
 
     return (
-        <div>
+        <div className='home_page'>
             <h1>Welcome to NC news</h1>
             <Link to={''}>
                 <h2>Home</h2>
