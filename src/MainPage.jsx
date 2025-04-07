@@ -5,11 +5,11 @@ import {Loading} from "./Loading.jsx";
 import {Error} from "./Error.jsx";
 
 
-const MainPage = ({users, loggedUser, setLoggedUser}) => {
-    const {data: articles, isLoading, error} = useApiRequest(getArticles)
+const MainPage = ({users, loggedUser, setLoggedUser, order, sortBy, selectedTopic}) => {
+    const {data: articles, isLoading, error} = useApiRequest(getArticles, order, sortBy, selectedTopic)
 
     if (isLoading) {
-        return <Loading/>
+        return <Loading />
     }
 
     if (error) {
