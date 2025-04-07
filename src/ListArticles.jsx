@@ -4,7 +4,7 @@ import {Votes} from "./Votes.jsx";
 const ListArticles = ({articles}) => {
 
     return (
-        <ul>
+        <ul className='articles_grid'>
         {articles.map((article) => {
             return (
             <li key={article.article_id}>
