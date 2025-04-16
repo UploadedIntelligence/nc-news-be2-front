@@ -1,12 +1,15 @@
-# React + Vite
+# NC-News front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Link to hosted version - https://inquisitive-cassata-34fa07.netlify.app/
 
-Currently, two official plugins are available:
+### Summary
+<p>The purpose of this project is to demonstrate basic front-end functionality. All the necessary React, css and JavaScript<br>
+logic to access the back-end of the project with the same and make requests to the database to display information in the browser<br>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Setup for a local version of the hosted website
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Clone the repo from https://github.com/UploadedIntelligence/nc-news-be2-front
+- Run `npm install` to install all dependencies
+- Run `npm run dev`
+- Access the website through the link provided in the console
