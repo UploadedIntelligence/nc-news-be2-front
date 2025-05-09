@@ -24,6 +24,10 @@ h1, h2 {
   color: #d1cfcf;
 }
 
+#article_title {
+  margin-bottom: 0;
+}
+
 h3 {
   color: antiquewhite;
 }
@@ -65,7 +69,16 @@ p {
 
 }
 
+.article_title_wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin: 1em;
+}
+
 .article_card_title {
+  margin: 0;
   color: #a8c28e;
 }
 
@@ -99,6 +112,8 @@ p {
 #article_card_author {
   font-size: 1.2em;
   color: #ddcfcf;
+  display: inline-block;
+  margin-bottom: 1em;
 }
 
 #article_card_body {
@@ -135,8 +150,10 @@ p {
 }
 
 .voting_card {
+  display: grid;
   border: #172d40 3px solid;
-  justify-self: left;
+  border-radius: 10px;
+  justify-self: center;
 }
 
 #vote_count {
