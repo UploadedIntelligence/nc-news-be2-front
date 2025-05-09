@@ -22,7 +22,7 @@ const DisplayArticle = () => {
     return (
         <ul>
             <img src={article.article_img_url} alt='article image' className='article_img'/>
-            <h2>{article.title}</h2>
+            <h2 id='article_title'>{article.title}</h2>
             <span id='article_card_author'>by {article.author}</span>
             <p id='article_card_body'>{article.body}</p>
             <Votes current_article={article} article_id={article_id}/>

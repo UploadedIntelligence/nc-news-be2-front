@@ -11,7 +11,13 @@ const ListArticles = ({articles}) => {
                 <div className='article_card'>
                     <Link to={`/articles/${article.article_id}`}>
                         <h3>{article.topic}</h3>
-                        <h2 className='article_card_title'>{article.title}</h2>
+                        <div className='article_title_wrapper'>
+
+                                <h2 className='article_card_title'>{article.title}</h2>
+
+
+                        </div>
+
                         <img src={article.article_img_url} alt='article image' className='article_img'/>
                     </Link>
                     <Votes current_article={article} article_id={article.article_id}></Votes>
